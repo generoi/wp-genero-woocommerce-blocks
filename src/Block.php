@@ -1,6 +1,6 @@
 <?php
 
-namespace GeneroWP\BlockBoilerplate;
+namespace GeneroWP\WooCommerceBlocks;
 
 use Illuminate\Support\Str;
 use ReflectionClass;
@@ -24,7 +24,7 @@ abstract class Block
     public function compose(): void
     {
         add_action('init', function () {
-            $this->register($this->getPath('assets/block.json'));
+            $this->register($this->getPath('build/block.json'));
         });
     }
 
@@ -47,7 +47,7 @@ abstract class Block
 
     public function render($attributes, $content): string
     {
-        $this->block = json_decode(file_get_contents($this->getPath('assets/block.json')));
+        $this->block = json_decode(file_get_contents($this->getPath('build/block.json')));
         $this->name = $this->block->name;
         $this->attributes = (object) $attributes;
         $this->content = $content;

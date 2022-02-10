@@ -1,0 +1,16 @@
+{
+  "apiVersion": 2,
+  "name": "genero/account-link",
+  "category": "design",
+  "parent": ["core/navigation"],
+  "attributes": {
+		"label": {
+			"type": "string"
+		}
+  },
+  "supports": {
+    "reusable": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

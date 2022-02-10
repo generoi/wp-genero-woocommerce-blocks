@@ -9,10 +9,10 @@ class RoboFile extends \Robo\Tasks
     use \Generoi\Robo\Task\Placeholder\loadTasks;
     use \Generoi\Robo\Command\SearchReplaceCommand;
 
-    public $machineName = 'wp-gutenberg-boilerplate';
-    public $name = 'Gutenberg Plugin Boilerplate';
-    public $namespace = 'BlockBoilerplate';
-    public $description = 'A boilerplate WordPress Gutenberg block';
+    public $machineName = 'wp-genero-woocommerce-blocks';
+    public $name = 'Gutenberg WooCommerce blocks';
+    public $namespace = 'WooCommerceBlocks';
+    public $description = 'WooCommerce blocks for the gutenberg editor';
     public $blockName = 'gutenberg-boilerplate';
 
     public function rename($machineName = null, $options = [

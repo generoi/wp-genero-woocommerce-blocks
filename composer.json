@@ -1,9 +1,9 @@
 {
-  "name": "generoi/wp-gutenberg-boilerplate",
+  "name": "generoi/wp-genero-woocommerce-blocks",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "A boilerplate WordPress Gutenberg block",
-  "homepage": "https://github.com/generoi/wp-gutenberg-boilerplate",
+  "description": "WooCommerce blocks for the gutenberg editor",
+  "homepage": "https://github.com/generoi/wp-genero-woocommerce-blocks",
   "authors": [
     {
       "name": "Oskar Schöldström",
@@ -15,7 +15,7 @@
     "gutenberg"
   ],
   "support": {
-    "issues": "https://github.com/generoi/wp-gutenberg-boilerplate/issues"
+    "issues": "https://github.com/generoi/wp-genero-woocommerce-blocks/issues"
   },
   "repositories": [
     {
@@ -41,7 +41,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GeneroWP\\BlockBoilerplate\\": "src/"
+      "GeneroWP\\WooCommerceBlocks\\": "src/"
     }
   },
   "scripts": {
@@ -53,5 +53,10 @@
     "exclude": [
       ".gitignore"
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
   }
 }
