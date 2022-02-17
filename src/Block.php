@@ -71,11 +71,38 @@ abstract class Block
 
     public function view($view, $attributes): string
     {
+        $template = $this->bladeTemplate($view)
+            ?: locate_template($this->templateDirectory() . $view . '.php')
+            ?: $this->getPath(sprintf('views/%s.php', $view));
+
         extract($attributes);
-
         ob_start();
-        require $this->getPath(sprintf('views/%s.php', $view));
-
+        require $template;
         return ob_get_clean();
     }
+
+    protected function bladeTemplate($view)
+    {
+        if (!function_exists('app')) {
+            return null;
+        }
+
+        $themeTemplates = app('sage.finder')->locate($this->templateDirectory() . $view . '.blade.php');
+        if (!$themeTemplates) {
+            return null;
+        }
+
+        $template = locate_template($themeTemplates);
+        if (!$template) {
+            return null;
+        }
+
+        return view($template)->makeLoader();
+    }
+
+    protected function templateDirectory(): string
+    {
+        return 'genero-woocommerce/';
+    }
+
 }
