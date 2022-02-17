@@ -19,6 +19,7 @@ class Plugin
     public function __construct()
     {
         add_action('plugins_loaded', [$this, 'init']);
+        add_filter('block_categories_all', [$this, 'registerBlockCategory']);
     }
 
     public function init()
@@ -34,5 +35,15 @@ class Plugin
                 (new $composer())->compose();
             }
         }
+    }
+
+    public function registerBlockCategory(array $categories): array
+    {
+        $categories[] = [
+            'slug' => 'woocommerce-genero',
+            'title' => __('WooCommerce (Genero)'),
+            'icon' => null,
+        ];
+        return $categories;
     }
 }
