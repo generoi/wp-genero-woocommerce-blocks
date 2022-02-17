@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/breadcrumb",
+  "title": "WooCommerce Breadcrumb",
+  "description": "Display the breadcrumb",
+  "icon": "image-flip-horizontal",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": true
+  },
+  "editorScript": "file:./index.js"
+}

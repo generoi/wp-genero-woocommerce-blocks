@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/add-to-cart",
+  "title": "WooCommerce Add To Cart",
+  "description": "Display Product price and Add To Cart",
+  "icon": "image-flip-horizontal",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

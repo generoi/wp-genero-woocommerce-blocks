@@ -12,5 +12,6 @@
     "reusable": false,
     "html": false
   },
+  "style": "wp-navigation-item",
   "editorScript": "file:./index.js"
 }
