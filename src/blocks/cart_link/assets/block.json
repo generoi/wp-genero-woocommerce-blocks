@@ -13,6 +13,7 @@
     "reusable": false,
     "html": false
   },
+  "style": "wp-navigation-item",
   "script": "file:./script.js",
   "editorScript": "file:./index.js"
 }
