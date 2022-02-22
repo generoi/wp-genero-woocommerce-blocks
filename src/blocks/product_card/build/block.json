@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/product-card",
+  "title": "WooCommerce Product Card",
+  "description": "Display an individual product",
+  "icon": "image-flip-horizontal",
+  "category": "woocommerce-genero",
+  "attributes": {
+    "postId": {
+      "type": "integer"
+    }
+  },
+  "supports": {
+    "reusable": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

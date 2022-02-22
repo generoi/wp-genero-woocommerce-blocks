@@ -65,6 +65,7 @@ abstract class Block
             [
                 'block' => $this,
                 'content' => $this->content,
+                'attributes' => $this->attributes,
             ]
         );
     }
