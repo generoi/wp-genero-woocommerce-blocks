@@ -11,7 +11,7 @@ function BlockEdit({attributes, setAttributes}) {
   return (
     <>
       <div {...blockProps}>
-        <a className="wp-block-genero-cart-link__item">
+        <a className="wp-block-genero-cart-link__item wp-block-navigation-item__content">
           <RichText
             className="wp-block-genero-cart-link__item__label"
             value={ label }
