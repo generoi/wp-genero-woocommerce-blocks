@@ -13,14 +13,14 @@ const overlayStyles = {
 
 function PlaceholderIllustration({
   height = 1,
-  isBackground = false,
+  isOverlay = false,
 }) {
 
   return (
     <div style={ {
       border: 'dashed 1px currentColor',
       opacity: 0.4,
-      ...(isBackground ? overlayStyles : {})
+      ...(isOverlay ? overlayStyles : {})
     } }>
       <SVG
         className="components-placeholder__illustration"
@@ -28,7 +28,7 @@ function PlaceholderIllustration({
         xmlns="http://www.w3.org/2000/svg"
         viewBox={`0 0 60 ${60 * height}`}
         preserveAspectRatio="none"
-        style={ isBackground ? {
+        style={ isOverlay ? {
           height: '100%',
           width: '100%',
         } : {} }
@@ -47,13 +47,15 @@ function PlaceholderIllustration({
 }
 
 export default function Placeholder({height, children}) {
+  const isOverlay = (!height && children) || (height && !children);
+
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{position: 'relative', width: '100%'}}>
       <PlaceholderIllustration
         height={ height }
-        isBackground={ children && !height }
+        isOverlay={ isOverlay }
       />
-      <div style={ height ? overlayStyles : {} }>
+      <div style={ !isOverlay ? overlayStyles : {} }>
         { children }
       </div>
     </div>

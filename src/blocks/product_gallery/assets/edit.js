@@ -7,7 +7,9 @@ function BlockEdit({attributes, setAttributes}) {
   return (
     <>
       <div {...blockProps}>
-        <Placeholder />
+        <Placeholder height={ 1 }>
+          Product Gallery
+        </Placeholder>
       </div>
     </>
   );
