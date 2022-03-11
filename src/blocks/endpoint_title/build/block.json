@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/endpoint-title",
+  "title": "WooCommerce Endpoint Title",
+  "description": "Display the endpoint title",
+  "icon": "heading",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": true
+  },
+  "editorScript": "file:./index.js"
+}

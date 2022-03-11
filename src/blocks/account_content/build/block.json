@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/account-content",
+  "title": "WooCommerce Account Content",
+  "description": "Display the account content",
+  "icon": "admin-users",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": true
+  },
+  "editorScript": "file:./index.js"
+}
