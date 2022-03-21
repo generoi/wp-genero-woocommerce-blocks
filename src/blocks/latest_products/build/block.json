@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/latest-products",
+  "title": "WooCommerce Latest Products",
+  "description": "Display the latest products",
+  "icon": "products",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": true
+  },
+  "editorScript": "file:./index.js"
+}
