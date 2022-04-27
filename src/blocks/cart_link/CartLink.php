@@ -38,10 +38,15 @@ class CartLink extends Block
 
     public function onCartChange($set)
     {
+        $currentCartCount = (int) ($_COOKIE[self::CART_COUNT_COOKIE] ?? 0);
         if ($set) {
-            $cartCount = \WC()->cart->get_cart_contents_count();
-            \wc_setcookie(self::CART_COUNT_COOKIE, $cartCount);
-        } else {
+            $cartCount = (int) \WC()->cart->get_cart_contents_count();
+
+            if ($cartCount !== $currentCartCount) {
+                \wc_setcookie(self::CART_COUNT_COOKIE, (string) $cartCount);
+                $_COOKIE[self::CART_COUNT_COOKIE] = (string) $cartCount;
+            }
+        } elseif (!$set && $currentCartCount) {
             \wc_setcookie(self::CART_COUNT_COOKIE, 0, time() - YEAR_IN_SECONDS);
             unset($_COOKIE[self::CART_COUNT_COOKIE]);
         }
