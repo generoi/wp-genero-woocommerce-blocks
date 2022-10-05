@@ -14,7 +14,11 @@
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint *.js src",
     "lint:styles": "stylelint src/**/*.{css,scss}",
-    "test": "npm run -s lint && composer test"
+    "test": "npm run -s lint && composer test",
+    "translate": "npm run translate:pot && npm run translate:mo",
+    "translate:pot": "npm run wp i18n make-pot . languages/wp-genero-woocommerce-blocks.pot -- --exclude=\"node_modules,vendor\" --skip-block-json",
+    "translate:mo": "npm run wp i18n make-mo languages/",
+    "wp": "vendor/bin/wp"
   },
   "devDependencies": {
     "@tinypixelco/laravel-mix-wp-blocks": "^1.0.0",

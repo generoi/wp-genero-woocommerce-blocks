@@ -46,4 +46,14 @@ class Plugin
         ];
         return $categories;
     }
+
+    public function loadTextdomain(): void
+    {
+        load_plugin_textdomain(
+            'wp-genero-woocommerce-blocks',
+            false,
+            dirname(plugin_basename(__FILE__)) . '/languages'
+        );
+
+    }
 }

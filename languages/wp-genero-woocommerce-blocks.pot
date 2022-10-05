@@ -1,0 +1,35 @@
+# Copyright (C) 2022 Genero
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gutenberg WooCommerce blocks 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-genero-woocommerce-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-10-05T17:16:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: wp-genero-woocommerce-blocks\n"
+
+#. Plugin Name of the plugin
+msgid "Gutenberg WooCommerce blocks"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://genero.fi"
+msgstr ""
+
+#. Description of the plugin
+msgid "WooCommerce blocks for the gutenberg editor"
+msgstr ""
+
+#. Author of the plugin
+msgid "Genero"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://genero.fi/"
+msgstr ""
