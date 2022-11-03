@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "genero/logged-in-name",
+  "title": "Logged in username",
+  "description": "Display the username the user is logged in as",
+  "icon": "admin-users",
+  "category": "woocommerce-genero",
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "align": true
+  },
+  "editorScript": "file:./index.js"
+}
