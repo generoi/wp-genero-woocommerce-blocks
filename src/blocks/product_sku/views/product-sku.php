@@ -1,5 +1,8 @@
 <?php
 global $product;
+if (! is_object($product)) {
+    $product = wc_get_product(get_the_ID());
+}
 ?>
 
 <div class="<?php echo $block->classes; ?>">
