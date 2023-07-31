@@ -4,9 +4,17 @@ namespace GeneroWP\WooCommerceBlocks;
 
 use Illuminate\Support\Str;
 use ReflectionClass;
+use stdClass;
 
 abstract class Block
 {
+    public stdClass $block;
+    public string $name;
+    public stdClass $attributes;
+    public string $content;
+    public string $className;
+    public string $classes;
+
     public function getPath(string $path = null): string
     {
         if ($path) {
