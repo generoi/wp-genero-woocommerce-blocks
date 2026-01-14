@@ -72,7 +72,7 @@ function BlockEdit({attributes, setAttributes}) {
                 ]
               : [{value: undefined, label: '...'}]
           }
-          onChange={ (postId) => setAttributes({postId}) }
+          onChange={ (postId) => setAttributes({postId: parseInt(postId)}) }
         />
       </div>
     </>
