@@ -15,7 +15,7 @@ abstract class Block
     public string $className;
     public string $classes;
 
-    public function getPath(string $path = null): string
+    public function getPath(?string $path = null): string
     {
         if ($path) {
             return sprintf('%s/%s', $this->getDir(), $path);
